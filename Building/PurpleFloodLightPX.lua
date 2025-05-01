@@ -29,6 +29,7 @@ DefineClass.PurpleFloodLightPX = {
 	}),
 	Health = 1000000,
 	MaxHealth = 1000000,
+	upgrade_label = "PX_FloodLight",
 	RoomPlacement = "outdoors",
 	lock_flags = 124,
 	lock_block_box = box(-600, -600, 0, 600, 600, 6300),

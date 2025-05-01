@@ -32,6 +32,7 @@ DefineClass.GalacticCeilingLampYellow = {
 	deconstruction_output = PlaceObj('ConstructionCost', {
 		ScrapMetal = 3000,
 	}),
+	upgrade_label = "PX_GalCeilLamp",
 	lock_block_box = box(-300, -300, -700, 300, 300, 0),
 	working_during_construction = true,
 	access_range = 1000,

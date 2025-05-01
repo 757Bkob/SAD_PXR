@@ -37,6 +37,7 @@ DefineClass.GalacticWallLampPurple = {
 		ScrapMetal = 3000,
 	}),
 	attached_to_wall = true,
+	upgrade_label = "PX_GalWallLamp",
 	lock_block_box = box(0, -300, 1400, 300, 300, 2100),
 	lock_pass_box = box(300, -300, 1400, 600, 300, 2100),
 	terrain_change = false,

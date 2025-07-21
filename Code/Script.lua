@@ -324,6 +324,10 @@ function find_colonist(id)
 	if did_find then return did_find else return nil end
 end
 
+function assign_loyalty_from_inst(survivor)
+	assign_loyalty(survivor.id)
+end
+
 function assign_loyalty(surv_id)
 	--print(survivor_instance)
 	--print(survivor_instance.id)
@@ -488,6 +492,14 @@ function px_hire_skill(skill)
 	local id_to_spawn = #fin_spawn_pool == 1 and fin_spawn_pool[1] or table.rand(fin_spawn_pool, InteractionRand(nil, "SpawnSurvivor"))
 	set_dispo(id_to_spawn)
 	px_map_upsert('hire_temp',id_to_spawn)
+end
+
+function TFormat.invasion_extra_difficulty(context_obj)
+	if GetGameDifficulty() ~= "Easy" and GetGameDifficulty() ~= "Medium" and GetGameDifficulty() ~= "Hard" and GetGameDifficulty() ~= "Medium" then 
+		return T{121111090812,"The mesh network is also fighting back and disrupting our buildings with CPUs in them!"}
+	else
+		return T{121111090812,""}
+	end
 end
 
 function TFormat.not_enough_droid_repair(context_obj)

@@ -15176,32 +15176,6 @@ PlaceObj('ModItemFolder', {
 				loot_def = "ScavengeCargo_Items",
 				weight = 5000,
 			}),
-			PlaceObj('LootEntryLootDef', {
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-				loot_def = "ScavengeCargo_Items",
-				weight = 5000,
-			}),
 		}),
 		PlaceObj('ModItemLootDef', {
 			group = "Scavenging",
@@ -15332,33 +15306,6 @@ PlaceObj('ModItemFolder', {
 			}),
 			PlaceObj('LootEntryResource', {
 				MaxAmount = 20000,
-				MinAmount = 5000,
-				Resource = "Cotton",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 15000,
 				MinAmount = 5000,
 				Resource = "Cotton",
 				game_conditions = {
@@ -18414,32 +18361,6 @@ PlaceObj('ModItemFolder', {
 					}),
 				},
 			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 4000,
-				Resource = "ScrapElectronics",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
 		}),
 		PlaceObj('ModItemLootDef', {
 			group = "Scavenging",
@@ -18476,33 +18397,6 @@ PlaceObj('ModItemFolder', {
 			}),
 			PlaceObj('LootEntryResource', {
 				MaxAmount = 60000,
-				MinAmount = 20000,
-				Resource = "LiquidFuel",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 50000,
 				MinAmount = 20000,
 				Resource = "LiquidFuel",
 				game_conditions = {
@@ -21556,32 +21450,6 @@ PlaceObj('ModItemFolder', {
 					}),
 				},
 			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 4000,
-				Resource = "MedKit",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
 		}),
 		PlaceObj('ModItemLootDef', {
 			group = "Scavenging",
@@ -21624,34 +21492,6 @@ PlaceObj('ModItemFolder', {
 			PlaceObj('LootEntryResource', {
 				MaxAmount = 15000,
 				MinAmount = 7000,
-				Resource = "Metal",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-				weight = 100000,
-			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 10000,
-				MinAmount = 5000,
 				Resource = "Metal",
 				game_conditions = {
 					PlaceObj('CheckDifficulty', {
@@ -24818,33 +24658,6 @@ PlaceObj('ModItemFolder', {
 					}),
 				},
 			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 10000,
-				MinAmount = 6000,
-				Resource = "EmergencyRation",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
 		}),
 		PlaceObj('ModItemLootDef', {
 			group = "Scavenging",
@@ -24882,33 +24695,6 @@ PlaceObj('ModItemFolder', {
 			}),
 			PlaceObj('LootEntryResource', {
 				MaxAmount = 20000,
-				MinAmount = 10000,
-				Resource = "ScrapMetal",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
-			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 15000,
 				MinAmount = 10000,
 				Resource = "ScrapMetal",
 				game_conditions = {
@@ -26484,33 +26270,6 @@ PlaceObj('ModItemFolder', {
 				MaxAmount = 30000,
 				MinAmount = 20000,
 				Resource = "Synthetics",
-			}),
-			PlaceObj('LootEntryResource', {
-				MaxAmount = 15000,
-				MinAmount = 10000,
-				Resource = "Synthetics",
-				game_conditions = {
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Easy",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Hard",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Insane",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "Medium",
-						Negate = true,
-					}),
-					PlaceObj('CheckDifficulty', {
-						Difficulty = "VeryHard",
-						Negate = true,
-					}),
-				},
 			}),
 			PlaceObj('LootEntryResource', {
 				MaxAmount = 15000,
@@ -86078,211 +85837,4 @@ PlaceObj('ModItemFolder', {
 			}),
 		}),
 	}),
-PlaceObj('ModItemNotificationPreset', {
-	expiration = 480000,
-	fx_action = "UINotificationImportant",
-	game_time = true,
-	id = "PXR_InsectNestSpawned",
-	rollover_text = T(355578021319, --[[ModItemNotificationPreset PXR_InsectNestSpawned rollover_text]] "An asteroid containing a Shrieker Nest has landed!"),
-	rollover_title = T(620306497652, --[[ModItemNotificationPreset PXR_InsectNestSpawned rollover_title]] "Shrieker's are Invading!"),
-	text = T(597186395109, --[[ModItemNotificationPreset PXR_InsectNestSpawned text]] "Shrieker's are Invading!"),
-}),
-PlaceObj('ModItemSpawnDef', {
-	Cond = return_true,
-	FindSpawnLoc = function (self, spawn_class, target)
-		return self:ResolveTarget()
-	end,
-	PostSpawn = function (self, obj, target, context)
-		AddGameNotification("PXR_InsectNestSpawned", nil, nil, {obj})
-	end,
-	Spawn = function (self, target, spawn_class)
-		return SpawnShriekerNestInsideMap(target)
-	end,
-	SurvivorDistMin = 250000,
-	TargetClass = "FallingDebrisMarker",
-	TargetFilter = function (obj) return 0 == MapCount(obj, obj.MaxPrefabRadius, "ScavengeableDebris", "FallingDebris", "Building", "Human", "ShriekerNest") end,
-	comment = '-- switching notification to "invasion"',
-	id = "PXR_Shrieker",
-}),
-PlaceObj('ModItemStoryBit', {
-	Category = "Animals",
-	Effects = {
-		PlaceObj('ActivateSpawnDef', {
-			SpawnDefId = "PXR_Shrieker",
-			param_bindings = false,
-		}),
-	},
-	Enabled = true,
-	HasNotification = false,
-	HasPopup = false,
-	OneTime = false,
-	Sets = set( "Negative" ),
-	SuppressTime = 19200000,
-	group = "Animals",
-	id = "PXR_NewShriekerNest",
-	max_reply_id = 2,
-	qa_info = PlaceObj('PresetQAInfo', {
-		data = {
-			{
-				action = "Modified",
-				time = 1583342170,
-				user = "Svetlio",
-			},
-			{
-				action = "Modified",
-				time = 1583343860,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1583483931,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1585229761,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1593085279,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1594825884,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1601282702,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1603726136,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1610448052,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1612535837,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1614182007,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1614668057,
-				user = "Gaby",
-			},
-			{
-				action = "Modified",
-				time = 1614683473,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1616412832,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1616682399,
-				user = "Gaby",
-			},
-			{
-				action = "Modified",
-				time = 1627911423,
-				user = "Bobby",
-			},
-			{
-				action = "Modified",
-				time = 1632126433,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1636034187,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1662382247,
-				user = "Xaerial",
-			},
-			{
-				action = "Modified",
-				time = 1665415593,
-				user = "Xaerial",
-			},
-		},
-		param_bindings = false,
-	}),
-}),
-PlaceObj('ModItemStoryBit', {
-	id = "Shrieker_Nest_Attacks",
-}),
-PlaceObj('ModItemStoryBit', {
-	Effects = {
-		PlaceObj('AttachEffectsToLabel', {
-			Effects = {
-				PlaceObj('ModifyObject', {
-					Add = 3000,
-					Id = "autoid5",
-					ModProperty = "MaxHealth",
-					ObjectClass = "TerritorialNest",
-					param_bindings = false,
-				}),
-				PlaceObj('ModifyObject', {
-					Add = 33,
-					Id = "autoid6",
-					ModProperty = "HitNegationChance_blunt",
-					ObjectClass = "TerritorialNest",
-					param_bindings = false,
-				}),
-				PlaceObj('ModifyObject', {
-					Add = 33,
-					Id = "autoid8",
-					ModProperty = "HitNegationChance_energy",
-					ObjectClass = "TerritorialNest",
-					param_bindings = false,
-				}),
-				PlaceObj('ModifyObject', {
-					Add = 33,
-					Id = "autoid7",
-					ModProperty = "HitNegationChance_piercing",
-					ObjectClass = "TerritorialNest",
-					param_bindings = false,
-				}),
-				PlaceObj('ModifyObject', {
-					Add = 33,
-					Id = "autoid9",
-					ModProperty = "HitNegationChance_gas",
-					ObjectClass = "TerritorialNest",
-					param_bindings = false,
-				}),
-			},
-			Id = "autoid_ucCehPy_ARKyC6z",
-			Label = "TerritorialNests",
-			LabelType = "Game",
-			param_bindings = false,
-		}),
-	},
-	HasNotification = false,
-	Image = "Mod/ucCehPy/Events/Shrieker Nest.PNG",
-	Text = T(577873284349, --[[ModItemStoryBit pxr_shrieker_coordinated_attacks Text]] "Our sensors are detecting a local mesh network form between the many nests near the colony.\nThis is ominous in and of itself, worse still each nest is fortifying itself.\n\nIt appears each nest is preparing to send coordinated attacks at us!\n\n<em>Destroy <nests_needed()> to disrupt their coordination and stop these attacks!\n<invasion_extra_difficulty()></em>"),
-	Title = T(400687377981, --[[ModItemStoryBit pxr_shrieker_coordinated_attacks Title]] "Invasion begins next phase "),
-	id = "pxr_shrieker_coordinated_attacks",
-}),
-PlaceObj('ModItemTrait', {
-	id = "reaction_holder_nest_invasion",
-}),
 }

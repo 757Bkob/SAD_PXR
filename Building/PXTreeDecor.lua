@@ -6,13 +6,13 @@ DefineClass.PXTreeDecor = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(476665195901, --[[ModItemBuildingCompositeDef PXTreeDecor display_name]] "Crystal Tree"),
-	description = T(519849317900, --[[ModItemBuildingCompositeDef PXTreeDecor description]] "A crystalized tree that provides comfort to survivors."),
-	menu_display_name = T(329013428302, --[[ModItemBuildingCompositeDef PXTreeDecor menu_display_name]] "Crystal Tree"),
+	display_name = T(476665195901, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Crystal Tree"),
+	description = T(519849317900, --[[ModItemLootDef ScavengeGenericDebris description]] "A crystalized tree that provides comfort to survivors."),
+	menu_display_name = T(329013428302, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Crystal Tree"),
 	BuildMenuIcon = "General/TreeDecorPX.png",
 	BuildMenuPos = 33,
-	display_name_pl = T(761127461876, --[[ModItemBuildingCompositeDef PXTreeDecor display_name_pl]] "Crystal Tree"),
-	display_name_short = T(219977464861, --[[ModItemBuildingCompositeDef PXTreeDecor display_name_short]] "Crystal Tree"),
+	display_name_pl = T(761127461876, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Crystal Tree"),
+	display_name_short = T(219977464861, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Crystal Tree"),
 	entity = "PXTreeDecoration",
 	labels = {
 		"BerserkTargets",

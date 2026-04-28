@@ -6,13 +6,13 @@ DefineClass.PXSciFiCar = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(691906815532, --[[ModItemBuildingCompositeDef PXSciFiCar display_name]] "Sci-Fi Car"),
-	description = T(991954375041, --[[ModItemBuildingCompositeDef PXSciFiCar description]] "I wonder what this means? Could it be...."),
-	menu_display_name = T(550744284544, --[[ModItemBuildingCompositeDef PXSciFiCar menu_display_name]] "Sci-Fi Car"),
+	display_name = T(691906815532, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Sci-Fi Car"),
+	description = T(991954375041, --[[ModItemLootDef ScavengeGenericDebris description]] "I wonder what this means? Could it be...."),
+	menu_display_name = T(550744284544, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Sci-Fi Car"),
 	BuildMenuIcon = "General/PXCar.png",
 	BuildMenuPos = 50,
-	display_name_pl = T(406730173189, --[[ModItemBuildingCompositeDef PXSciFiCar display_name_pl]] "Sci-Fi Car"),
-	display_name_short = T(142729337791, --[[ModItemBuildingCompositeDef PXSciFiCar display_name_short]] "Sci-Fi Car"),
+	display_name_pl = T(406730173189, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Sci-Fi Car"),
+	display_name_short = T(142729337791, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Sci-Fi Car"),
 	entity = "PXSciFiCar",
 	labels = {
 		"BerserkTargets",

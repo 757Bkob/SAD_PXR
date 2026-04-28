@@ -12,11 +12,11 @@ DefineClass.GalacticAnimalBedS = {
 	},
 	ForwardDir = 5400,
 	BuildMenuCategory = "sub_RanchingPX",
-	display_name = T(498063460917, --[[ModItemBuildingCompositeDef GalacticAnimalBedS display_name]] "Animal spot"),
-	description = T(182929164543, --[[ModItemBuildingCompositeDef GalacticAnimalBedS description]] "Dedicated sleeping spot for small and medium animals. Sleeping in it makes the animal more happy. Increased durability and cannot be a target of weather conditions such as lightning."),
+	display_name = T(498063460917, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Animal spot"),
+	description = T(182929164543, --[[ModItemLootDef ScavengeGenericDebris description]] "Dedicated sleeping spot for small and medium animals. Sleeping in it makes the animal more happy. Increased durability and cannot be a target of weather conditions such as lightning."),
 	BuildMenuIcon = "General/GalacticAnimalBedSmall.png",
 	BuildMenuPos = 10,
-	display_name_pl = T(602909724329, --[[ModItemBuildingCompositeDef GalacticAnimalBedS display_name_pl]] "Animal spots"),
+	display_name_pl = T(602909724329, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Animal spots"),
 	entity = "BedAnimal",
 	labels = {
 		"AnimalSleepingSpot",
@@ -44,7 +44,7 @@ DefineClass.GalacticAnimalBedS = {
 	OwnedComponent = true,
 	ownership_class = "AnimalBedSmall",
 	ChangeOwnerIcon = "UI/Icons/Infopanels/animal_change_owner",
-	ChangeOwnerRolloverText = T(961039390316, --[[ModItemBuildingCompositeDef GalacticAnimalBedS ChangeOwnerRolloverText]] "Decide which animal is allowed to sleep on this spot."),
+	ChangeOwnerRolloverText = T(961039390316, --[[ModItemLootDef ScavengeGenericDebris ChangeOwnerRolloverText]] "Decide which animal is allowed to sleep on this spot."),
 	OwnerLabel = "TamedAnimals",
 	Filter = function (obj)
 		local size = obj.BodySize

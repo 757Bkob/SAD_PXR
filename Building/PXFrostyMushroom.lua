@@ -6,13 +6,13 @@ DefineClass.PXFrostyMushroom = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(168235357679, --[[ModItemBuildingCompositeDef PXFrostyMushroom display_name]] "Frosty Mushroom"),
-	description = T(724451103784, --[[ModItemBuildingCompositeDef PXFrostyMushroom description]] "I wonder what happens if I touch it?"),
-	menu_display_name = T(816107322238, --[[ModItemBuildingCompositeDef PXFrostyMushroom menu_display_name]] "Frosty Mushroom"),
+	display_name = T(168235357679, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Frosty Mushroom"),
+	description = T(724451103784, --[[ModItemLootDef ScavengeGenericDebris description]] "I wonder what happens if I touch it?"),
+	menu_display_name = T(816107322238, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Frosty Mushroom"),
 	BuildMenuIcon = "General/FrostyShroomDecPX.png",
 	BuildMenuPos = 36,
-	display_name_pl = T(890935968305, --[[ModItemBuildingCompositeDef PXFrostyMushroom display_name_pl]] "Frosty Mushroom"),
-	display_name_short = T(852032311292, --[[ModItemBuildingCompositeDef PXFrostyMushroom display_name_short]] "Frosty Mushroom"),
+	display_name_pl = T(890935968305, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Frosty Mushroom"),
+	display_name_short = T(852032311292, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Frosty Mushroom"),
 	entity = "PXDecorMushrooms",
 	labels = {
 		"BerserkTargets",

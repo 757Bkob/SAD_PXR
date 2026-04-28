@@ -6,13 +6,13 @@ DefineClass.PXAlienRockDecor = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(112726033662, --[[ModItemBuildingCompositeDef PXAlienRockDecor display_name]] "Alien Rock"),
-	description = T(426808256276, --[[ModItemBuildingCompositeDef PXAlienRockDecor description]] "A rock with some strange green substance... I mean, it cant be all that great can it?"),
-	menu_display_name = T(597674169219, --[[ModItemBuildingCompositeDef PXAlienRockDecor menu_display_name]] "Alien Rock"),
+	display_name = T(112726033662, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Alien Rock"),
+	description = T(426808256276, --[[ModItemLootDef ScavengeGenericDebris description]] "A rock with some strange green substance... I mean, it cant be all that great can it?"),
+	menu_display_name = T(597674169219, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Alien Rock"),
 	BuildMenuIcon = "General/AlienRockPXDecor.png",
 	BuildMenuPos = 34,
-	display_name_pl = T(750424554092, --[[ModItemBuildingCompositeDef PXAlienRockDecor display_name_pl]] "Alien Rock"),
-	display_name_short = T(930855361673, --[[ModItemBuildingCompositeDef PXAlienRockDecor display_name_short]] "Alien Rock"),
+	display_name_pl = T(750424554092, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Alien Rock"),
+	display_name_short = T(930855361673, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Alien Rock"),
 	entity = "AlienRockDecPX",
 	labels = {
 		"BerserkTargets",

@@ -6,11 +6,11 @@ DefineClass.ShootingTarget = {
 
 	object_class = "Building",
 	BuildMenuCategory = "Leisure",
-	display_name = T(887467565446, --[[ModItemBuildingCompositeDef ShootingTarget display_name]] "Durable Shooting target"),
-	description = T(450381500634, --[[ModItemBuildingCompositeDef ShootingTarget description]] "Used for relaxation. Grants Combat experience on use."),
+	display_name = T(887467565446, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Durable Shooting target"),
+	description = T(450381500634, --[[ModItemLootDef ScavengeGenericDebris description]] "Used for relaxation. Grants Combat experience on use."),
 	BuildMenuIcon = "UI/Icons/Build Menu/shooting_target",
 	BuildMenuPos = 5020,
-	display_name_pl = T(529598235395, --[[ModItemBuildingCompositeDef ShootingTarget display_name_pl]] "Shooting targets"),
+	display_name_pl = T(529598235395, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Shooting targets"),
 	entity = "ShootingTarget",
 	labels = {
 		"BerserkTargets",

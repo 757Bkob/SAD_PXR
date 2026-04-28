@@ -11,13 +11,13 @@ DefineClass.GalacticLaserBarrierWall = {
 		}),
 	},
 	BuildMenuCategory = "sub_GalacticFortificationsWallsPX",
-	display_name = T(886663238354, --[[ModItemBuildingCompositeDef GalacticLaserBarrierWall display_name]] "Galactic Laser Barrier"),
-	description = T(584459522630, --[[ModItemBuildingCompositeDef GalacticLaserBarrierWall description]] "An impenetrable barrier powered by electricity that consumes more energy with each successive attack. When not supplied with electricity, the barrier is deactivated and provides unrestricted access. Galactic technology had advanced the standard force field barrier to another level of design by making it drain less energy when taking damage, more durable posts and armored infastructure. "),
-	menu_display_name = T(923795210753, --[[ModItemBuildingCompositeDef GalacticLaserBarrierWall menu_display_name]] "Galactic Laser Barrier"),
+	display_name = T(886663238354, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Galactic Laser Barrier"),
+	description = T(584459522630, --[[ModItemLootDef ScavengeGenericDebris description]] "An impenetrable barrier powered by electricity that consumes more energy with each successive attack. When not supplied with electricity, the barrier is deactivated and provides unrestricted access. Galactic technology had advanced the standard force field barrier to another level of design by making it drain less energy when taking damage, more durable posts and armored infastructure. "),
+	menu_display_name = T(923795210753, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Galactic Laser Barrier"),
 	BuildMenuIcon = "Trade/GalacticFortification.png",
 	BuildMenuPos = 40,
-	display_name_pl = T(379004587909, --[[ModItemBuildingCompositeDef GalacticLaserBarrierWall display_name_pl]] "Galactic Laser Barrier"),
-	display_name_short = T(869853165545, --[[ModItemBuildingCompositeDef GalacticLaserBarrierWall display_name_short]] "Galactic Laser Barrier"),
+	display_name_pl = T(379004587909, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Galactic Laser Barrier"),
+	display_name_short = T(869853165545, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Galactic Laser Barrier"),
 	labels = {
 		"Structures",
 	},
@@ -70,6 +70,7 @@ DefineClass.GalacticLaserBarrierWall = {
 	ChangeOwnerIcon = "UI/Icons/Infopanels/assign_owner",
 	IsPowerConsumer = true,
 	PowerConsumption = 1000,
+	HasSmartConnection = true,
 	CableClass = "EM",
 }
 

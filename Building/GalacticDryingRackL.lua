@@ -15,11 +15,11 @@ DefineClass.GalacticDryingRackL = {
 	TreatStorageAsDevice = true,
 	ClosedStorage = true,
 	BuildMenuCategory = "sub_RanchingPX",
-	display_name = T(887153776441, --[[ModItemBuildingCompositeDef GalacticDryingRackL display_name]] "Drying Rack"),
-	description = T(867743842058, --[[ModItemBuildingCompositeDef GalacticDryingRackL description]] "Dries raw resources over time. Has built-in roof which slows down the drying process but allows products to be stored longer before spoiling. Is resistant to lightning weather conditions and has increased capacity, able to store much larger amounts of resources. Dries resources alot faster than the standard drying rack.\n\nTransforms <color TextEmphasis>Raw red meat</color><image 'UI/Icons/Resources/res_raw_meatt' 1100> into <color TextEmphasis>Dried meat</color><image 'UI/Icons/Resources/res_dry_meat' 1100>, and <color TextEmphasis>Hides</color><image 'UI/Icons/Resources/res_raw_leather' 1100> into <color TextEmphasis>Leather</color><image 'UI/Icons/Resources/res_dry_leather' 1100>."),
+	display_name = T(887153776441, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Drying Rack"),
+	description = T(867743842058, --[[ModItemLootDef ScavengeGenericDebris description]] "Dries raw resources over time. Has built-in roof which slows down the drying process but allows products to be stored longer before spoiling. Is resistant to lightning weather conditions and has increased capacity, able to store much larger amounts of resources. Dries resources alot faster than the standard drying rack.\n\nTransforms <color TextEmphasis>Raw red meat</color><image 'UI/Icons/Resources/res_raw_meatt' 1100> into <color TextEmphasis>Dried meat</color><image 'UI/Icons/Resources/res_dry_meat' 1100>, and <color TextEmphasis>Hides</color><image 'UI/Icons/Resources/res_raw_leather' 1100> into <color TextEmphasis>Leather</color><image 'UI/Icons/Resources/res_dry_leather' 1100>."),
 	BuildMenuIcon = "General/GalacticDryerRack.png",
 	BuildMenuPos = 1,
-	display_name_pl = T(437768930507, --[[ModItemBuildingCompositeDef GalacticDryingRackL display_name_pl]] "Drying Rack"),
+	display_name_pl = T(437768930507, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Drying Rack"),
 	entity = "Skin_Rag_04",
 	labels = {
 		"BerserkTargets",
@@ -50,7 +50,7 @@ DefineClass.GalacticDryingRackL = {
 	StorageDepotComponent = true,
 	VisualStorageComponent = true,
 	TransformMetaProp = "drying_progress",
-	TransformDisplayName = T(991987394585, --[[ModItemBuildingCompositeDef GalacticDryingRackL TransformDisplayName]] "Drying"),
+	TransformDisplayName = T(991987394585, --[[ModItemLootDef ScavengeGenericDebris TransformDisplayName]] "Drying"),
 	TransformDefinitions = {
 		PlaceObj('ResTransform', {
 			'InputResource', "RawMeat",

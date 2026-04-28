@@ -6,13 +6,13 @@ DefineClass.PXObeliskDecor = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(173888609880, --[[ModItemBuildingCompositeDef PXObeliskDecor display_name]] "Obelisk"),
-	description = T(388769973265, --[[ModItemBuildingCompositeDef PXObeliskDecor description]] "An ancient obelisk to admire."),
-	menu_display_name = T(526930119010, --[[ModItemBuildingCompositeDef PXObeliskDecor menu_display_name]] "Obelisk"),
+	display_name = T(173888609880, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Obelisk"),
+	description = T(388769973265, --[[ModItemLootDef ScavengeGenericDebris description]] "An ancient obelisk to admire."),
+	menu_display_name = T(526930119010, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Obelisk"),
 	BuildMenuIcon = "General/ObeliskDecorPX.png",
 	BuildMenuPos = 34,
-	display_name_pl = T(328540126102, --[[ModItemBuildingCompositeDef PXObeliskDecor display_name_pl]] "Obelisk"),
-	display_name_short = T(480584832807, --[[ModItemBuildingCompositeDef PXObeliskDecor display_name_short]] "Obelisk"),
+	display_name_pl = T(328540126102, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Obelisk"),
+	display_name_short = T(480584832807, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Obelisk"),
 	entity = "PXObeliskDec",
 	labels = {
 		"BerserkTargets",

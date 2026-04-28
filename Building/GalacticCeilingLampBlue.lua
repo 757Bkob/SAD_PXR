@@ -1,11 +1,11 @@
 UndefineClass('GalacticCeilingLampBlue')
 DefineClass.GalacticCeilingLampBlue = {
-	__parents = { "Building", "InvulnerableComponent", "LightingComponent", "PowerComponent" },
+	__parents = { "CeilingLampBuilding", "InvulnerableComponent", "LightingComponent", "PowerComponent" },
 	__generated_by_class = "ModItemBuildingCompositeDef",
 
 	flags = { efAttackable = false, gofDamageable = false, },
 
-	object_class = "Building",
+	object_class = "CeilingLampBuilding",
 	LockPrerequisites = {
 		PlaceObj('CheckTech', {
 			Tech = "GalacticPower",
@@ -14,11 +14,11 @@ DefineClass.GalacticCeilingLampBlue = {
 	unload_anim_hands = "standing_DropDown_Hands_High",
 	load_anim_hands = "standing_PickUp_Hands_High",
 	BuildMenuCategory = "sub_LightBluePX",
-	display_name = T(854362118800, --[[ModItemBuildingCompositeDef GalacticCeilingLampBlue display_name]] "Galactic Ceiling Light"),
-	description = T(381058495179, --[[ModItemBuildingCompositeDef GalacticCeilingLampBlue description]] "Provides light while working. Requires a ceiling. Due to an advancement in technology these light fixtures drain less electricity and have practically zero chance of malfunctioning. Has light indicators, enhanced range and color options."),
+	display_name = T(854362118800, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Galactic Ceiling Light"),
+	description = T(381058495179, --[[ModItemLootDef ScavengeGenericDebris description]] "Provides light while working. Requires a ceiling. Due to an advancement in technology these light fixtures drain less electricity and have practically zero chance of malfunctioning. Has light indicators, enhanced range and color options."),
 	BuildMenuIcon = "Trade/GalaxyCeilingLight.png",
 	BuildMenuPos = 2001,
-	display_name_pl = T(779766378483, --[[ModItemBuildingCompositeDef GalacticCeilingLampBlue display_name_pl]] "Galactic Ceiling Light"),
+	display_name_pl = T(779766378483, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Galactic Ceiling Light"),
 	entity = "CeilingLamp_Electric",
 	update_interval = 5000,
 	can_turn_off = true,
@@ -47,7 +47,6 @@ DefineClass.GalacticCeilingLampBlue = {
 	LightRadius = 8000,
 	LightFov = 10800,
 	LightDirection = point(0, 0, -4096),
-	LightShowArea = true,
 	IlluminateObjects = function (self)
 		if self.active then self:IlluminateObjectsInRadius() end
 	end,

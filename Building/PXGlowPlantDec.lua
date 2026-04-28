@@ -6,13 +6,13 @@ DefineClass.PXGlowPlantDec = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(875611906968, --[[ModItemBuildingCompositeDef PXGlowPlantDec display_name]] "Glowing Plant"),
-	description = T(420480280228, --[[ModItemBuildingCompositeDef PXGlowPlantDec description]] "This is a plant... a plant that glows."),
-	menu_display_name = T(321792737131, --[[ModItemBuildingCompositeDef PXGlowPlantDec menu_display_name]] "Glowing Plant"),
+	display_name = T(875611906968, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Glowing Plant"),
+	description = T(420480280228, --[[ModItemLootDef ScavengeGenericDebris description]] "This is a plant... a plant that glows."),
+	menu_display_name = T(321792737131, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Glowing Plant"),
 	BuildMenuIcon = "General/GlowPlantDecPX.png",
 	BuildMenuPos = 35,
-	display_name_pl = T(223272835742, --[[ModItemBuildingCompositeDef PXGlowPlantDec display_name_pl]] "Glowing Plant"),
-	display_name_short = T(949437596088, --[[ModItemBuildingCompositeDef PXGlowPlantDec display_name_short]] "Glowing Plant"),
+	display_name_pl = T(223272835742, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Glowing Plant"),
+	display_name_short = T(949437596088, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Glowing Plant"),
 	entity = "GlowingPlantDecPX",
 	labels = {
 		"BerserkTargets",

@@ -1,28 +1,24 @@
 UndefineClass('RepairBayPX')
 DefineClass.RepairBayPX = {
-	__parents = { "Building", "OwnedComponent", "PowerComponent", "ProductionDeviceComponent" },
+	__parents = { "Building", "OwnedComponent", "PowerComponent", "ProductionDeviceComponent", "ResConsumerDeviceComponent" },
 	__generated_by_class = "ModItemBuildingCompositeDef",
 
 
 	object_class = "Building",
-	LockPrerequisites = {
-		PlaceObj('CheckTech', {
-			Tech = "RepairBayPX",
-		}),
-	},
+	LockState = "locked",
 	unload_anim_hands = "standing_DropDown_Hands",
 	load_anim_hands = "standing_PickUp_Hands",
 	SingleItemPerStack = true,
 	ClosedStorage = true,
 	StorageDemandPriority = 4,
 	BuildMenuCategory = "sub_TerminalsPX",
-	display_name = T(444329092158, --[[ModItemBuildingCompositeDef RepairBayPX display_name]] "Repair Bay"),
-	description = T(300300263210, --[[ModItemBuildingCompositeDef RepairBayPX description]] "Use this repair bay to repair worn down clothing, weaponry and armor."),
-	menu_display_name = T(119846140891, --[[ModItemBuildingCompositeDef RepairBayPX menu_display_name]] "Repair Bay"),
+	display_name = T(444329092158, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Repair Bay"),
+	description = T(300300263210, --[[ModItemLootDef ScavengeGenericDebris description]] "Can be used to drain the durability of equipped gear for special repair kits.\nOr use the repair kits to give durability back to equipped gear.\n\n1 repair kit is approximately 10 durability."),
+	menu_display_name = T(119846140891, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Repair Bay"),
 	BuildMenuIcon = "General/RepairBayPX.png",
 	BuildMenuPos = 70,
-	display_name_pl = T(413117232652, --[[ModItemBuildingCompositeDef RepairBayPX display_name_pl]] "Repair Bay"),
-	display_name_short = T(632652012102, --[[ModItemBuildingCompositeDef RepairBayPX display_name_short]] "Repair Bay"),
+	display_name_pl = T(413117232652, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Repair Bay"),
+	display_name_short = T(632652012102, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Repair Bay"),
 	entity = "PXRepairBayCNS",
 	labels = {
 		"BerserkTargets",
@@ -51,6 +47,7 @@ DefineClass.RepairBayPX = {
 	OwnedComponent = true,
 	PowerComponent = true,
 	ProductionDeviceComponent = true,
+	ResConsumerDeviceComponent = true,
 	ChangeOwnerIcon = "UI/Icons/Infopanels/assign_owner",
 	IsPowerConsumer = true,
 	PowerConsumption = 20000,
@@ -60,6 +57,10 @@ DefineClass.RepairBayPX = {
 	},
 	override_material_during_production = false,
 	ProductionDeviceSkipsStateChange = true,
+	res_consumed = "RepairKitPX",
+	res_stored = 200000,
+	res_operate_time = 400000,
+	res_request_threshold = 10,
 	stack_count = 40,
 	accepted_res = {
 		"Weapons",

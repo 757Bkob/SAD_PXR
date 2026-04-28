@@ -61,3 +61,8 @@ Hackers Terminal - PXHackingCNS - Credits to Bogdan Kuznetsov at CC Attribution 
 Trading Console - PXTradingCNS - Credits to Uğur Yakışık at CC Attribution (Logics for importing model)
 Biologist Console - PXBiologistCNS - Credits to fwdhxl at CC Attribution (Logics for importing model)
 Repair Station - Credits to TooManyDemons at CC Attribution (Logics for importing model)
+
+Recycle Icon
+<a href="https://www.flaticon.com/free-icons/recyle" title="recyle icons">Recyle icons created by popcornarts - Flaticon</a>
+Repair Icon
+<a href="https://www.flaticon.com/free-icons/repair" title="repair icons">Repair icons created by Freepik - Flaticon</a>

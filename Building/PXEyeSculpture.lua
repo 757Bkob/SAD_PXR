@@ -6,13 +6,13 @@ DefineClass.PXEyeSculpture = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(296358168983, --[[ModItemBuildingCompositeDef PXEyeSculpture display_name]] "Eye Sculpture"),
-	description = T(962404670122, --[[ModItemBuildingCompositeDef PXEyeSculpture description]] "A sculpture of a glowing eye."),
-	menu_display_name = T(517185047263, --[[ModItemBuildingCompositeDef PXEyeSculpture menu_display_name]] "Eye Sculpture"),
+	display_name = T(296358168983, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Eye Sculpture"),
+	description = T(962404670122, --[[ModItemLootDef ScavengeGenericDebris description]] "A sculpture of a glowing eye."),
+	menu_display_name = T(517185047263, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Eye Sculpture"),
 	BuildMenuIcon = "General/PXEyesculpture.png",
 	BuildMenuPos = 60,
-	display_name_pl = T(125904486047, --[[ModItemBuildingCompositeDef PXEyeSculpture display_name_pl]] "Eye Sculpture"),
-	display_name_short = T(318306945300, --[[ModItemBuildingCompositeDef PXEyeSculpture display_name_short]] "Eye Sculpture"),
+	display_name_pl = T(125904486047, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Eye Sculpture"),
+	display_name_short = T(318306945300, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Eye Sculpture"),
 	entity = "PXEyeSculptures",
 	labels = {
 		"BerserkTargets",

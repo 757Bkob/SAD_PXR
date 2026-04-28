@@ -6,13 +6,13 @@ DefineClass.PXRingSculpture = {
 
 	object_class = "Building",
 	BuildMenuCategory = "sub_DecorPX",
-	display_name = T(574321499844, --[[ModItemBuildingCompositeDef PXRingSculpture display_name]] "Ring Sculpture"),
-	description = T(295076187058, --[[ModItemBuildingCompositeDef PXRingSculpture description]] "Some strange ring on a rock formation."),
-	menu_display_name = T(386186282018, --[[ModItemBuildingCompositeDef PXRingSculpture menu_display_name]] "Ring Sculpture"),
+	display_name = T(574321499844, --[[ModItemLootDef ScavengeGenericDebris display_name]] "Ring Sculpture"),
+	description = T(295076187058, --[[ModItemLootDef ScavengeGenericDebris description]] "Some strange ring on a rock formation."),
+	menu_display_name = T(386186282018, --[[ModItemLootDef ScavengeGenericDebris menu_display_name]] "Ring Sculpture"),
 	BuildMenuIcon = "General/RingSculptureDecPX.png",
 	BuildMenuPos = 37,
-	display_name_pl = T(648842736073, --[[ModItemBuildingCompositeDef PXRingSculpture display_name_pl]] "Ring Sculpture"),
-	display_name_short = T(341767191530, --[[ModItemBuildingCompositeDef PXRingSculpture display_name_short]] "Ring Sculpture"),
+	display_name_pl = T(648842736073, --[[ModItemLootDef ScavengeGenericDebris display_name_pl]] "Ring Sculpture"),
+	display_name_short = T(341767191530, --[[ModItemLootDef ScavengeGenericDebris display_name_short]] "Ring Sculpture"),
 	entity = "PXRingSculptureD",
 	labels = {
 		"BerserkTargets",

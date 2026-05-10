@@ -1,4 +1,5 @@
 
+local day_duration = const.DayDuration
 MapVar("Px_Empire_rapport",500)
 MapVar("Px_Empire_state",1)
 MapVar("Px_phyrexia_rapport",0)
@@ -6,21 +7,7 @@ MapVar("Px_phrexia_state",0)
 MapVar("Px_black_market_state",0)
 MapVar("Px_black_market_rapport",0)
 -- Ship orbit overhaul
-MapVar("Px_smuggle_ship",false)
-MapVar("Px_smuggle_trade",false)
-MapVar("Px_smuggle_hire",false)
-MapVar("Px_navy_ship",false)
-MapVar("Px_navy_trade",false)
-MapVar("Px_navy_hire",false)
-MapVar("Px_col_ship",false)
-MapVar("Px_col_trade",false)
-MapVar("Px_col_hire",false)
-MapVar("Px_trade_ship",false)
-MapVar("Px_trade_trade",false)
-MapVar("Px_trade_hire",false)
-MapVar("Px_automated_ship",false)
-MapVar("Px_automated_trade",false)
-MapVar("Px_automated_hire",false)
+MapVar("Px_ship_logs",{})
 -- Tutorials // hints // meta
 MapVar("Px_hire_source",'none')
 MapVar("Px_hire_dispo",'none')
@@ -78,22 +65,6 @@ function SavegameFixups.PXR_MapVars()
 		{name="px_phrexia_state",init=0,globalvar=Px_phrexia_state},
 		{name="px_black_market_state",init=0,globalvar=Px_black_market_state},
 		{name="px_black_market_rapport",init=0,globalvar=Px_black_market_rapport},
-		-- Ships in orbit and ship trading
-		{name="px_smuggle_ship",init=false,globalvar=Px_smuggle_ship},
-		{name="px_smuggle_trade",init=false,globalvar=Px_smuggle_trade},
-		{name="px_smuggle_hire",init=false,globalvar=Px_smuggle_hire},
-		{name="px_navy_ship",init=false,globalvar=Px_navy_ship},
-		{name="px_navy_trade",init=false,globalvar=Px_navy_trade},
-		{name="px_navy_hire",init=false,globalvar=Px_navy_hire},
-		{name="px_col_ship",init=false,globalvar=Px_col_ship},
-		{name="px_col_trade",init=false,globalvar=Px_col_trade},
-		{name="px_col_hire",init=false,globalvar=Px_col_hire},
-		{name="px_trade_ship",init=false,globalvar=Px_trade_ship},
-		{name="px_trade_trade",init=false,globalvar=Px_trade_trade},
-		{name="px_trade_hire",init=false,globalvar=Px_trade_hire},
-		{name="px_automated_ship",init=false,globalvar=Px_automated_ship},
-		{name="px_automated_trade",init=false,globalvar=Px_automated_trade},
-		{name="px_automated_hire",init=false,globalvar=Px_automated_hire},
 		-- Tutorials // hints // meta
 		{name="px_hire_source",init='none',globalvar=Px_hire_source},
 		{name="px_hire_dispo",init='none',globalvar=Px_hire_dispo},
@@ -111,7 +82,7 @@ function SavegameFixups.PXR_MapVars()
 	local flag = false
 	for _, var in ipairs(all_vars) do
 		if MapVarValues[var['name']] ~= var['init'] then
-			var[globalvar] = MapVarValues[var['name']]
+			var['globalvar'] = MapVarValues[var['name']]
 			MapVarValues[var['name']]=var['init']
 			flag = true
 		end
@@ -127,64 +98,21 @@ function HumanoidCompositeBody:IsProtectedFromDisaster(disaster)
 	end
 end
 
-function PXR_instance_fill(tier)
-	tier = tier or 0
-	local chains= {}
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Dragonfly_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Glutch_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Juno_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Scissorhands_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Skarabei_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Tecatli_chain
-	chains[#chains+1] = Presets.UnitClassChain.Default.base_Shrieker_chain
-	print("New Attack Wave")
-	local min_units = {}
-	for _,chain in ipairs(chains) do
-		local attacker_selected = table.rand(chain:get_units_by_tier(tier))
-		min_units[#min_units+1] = attacker_selected
+function PXR_instance_fill(base_unit,others,tier)
+	-- PXR overriding wrapping the EE evolutions
+	DebugPrint("Checking for overrides")
+	base_unit = base_unit or false
+	if not base_unit and Animal_override then
+		base_unit = Animal_override
 	end
-	local seed = InteractionRand(nil, "AttackWave")
-	local rand = BraidRandomCreate(seed)
-	print("Units to select from: ")
-	print(min_units)
-	local minion 
-	print("Checking for overrides")
-	if Animal_override then
-		local o_species = Find_evo_chain(Animal_override)
-		minion = {table.rand(o_species:get_units_by_tier(tier))}
-	else
-		minion = table.rand(min_units, rand())
-	end
+	-- reset so player can try again
 	Animal_override_attempted = false
 	Animal_override = false
-	local dog_chain = Presets.UnitClassChain.Default.base_Dog_chain
-	min_units[#min_units+1]=table.rand(dog_chain:get_units_by_tier(tier))
-	local minion2 = table.rand(min_units, rand())
-	while minion2 == minion do
-		minion2 = table.rand(min_units, rand())
-	end
-	local minion3 = table.rand(min_units, rand())
-	while minion3 == minion or minion3 == minion2 do
-		minion3 = table.rand(min_units,rand())
-	end
-	local temp_list = {}
-	print("Main Animal: ",minion)
-	print('Added Animal 1: ',minion2)
-	print('Added Animal 2: ',minion3)
-	temp_list[1]={ minion2, AnimalDefs[minion2]:GetProperty("SpawnDefWeight")}
-	temp_list[2]={ minion3, AnimalDefs[minion3]:GetProperty("SpawnDefWeight")}
-	local spawnClassBest = ''
-	local addedClassList = {}
-	local instance = {}
-	spawnClassBest, addedClassList =check_count_and_upgrade(minion,temp_list)
-	instance.SpawnClass = spawnClassBest
-	instance.AdditionalClassList = {}
-	print(spawnClassBest)
-	print(addedClassList)
-	for i=1,#addedClassList do
-		instance.AdditionalClassList[#instance.AdditionalClassList+1] ={addedClassList[i]['id'], addedClassList[i]['weight']}
-	end
-	return instance
+	Animal_temperament_attempted = false
+	Animal_temperament_overrive = false
+	tier = tier or 1
+	if tier < 1 then tier = 1 end
+	return Attack_instance_fill(base_unit,others,tier)
 end
 
 local colonist_hiring_table = {
@@ -335,7 +263,7 @@ function px_select_colonist(hire_method)
 	px_map_upsert('hire_temp',id)
 end
 
-local function are_prereqs_loaded()
+function are_prereqs_loaded()
 	--print("Checking for PX PreReqs")
 	local ilu = false
 	local comlib = false
@@ -357,9 +285,13 @@ local function are_prereqs_loaded()
 			Presets.ActivitySet.Default.Work.Activities.AT_Excavate = true
 		end
 	end
-	if not (ilu and comlib and nests_awaken and friendly_expeditions) then
+	if not (ilu and comlib and friendly_expeditions) then
 		ForceActivateStoryBit("PreReqs_Not_Found")
 	end
+	--[[
+	if not (nests_awaken) then
+		ForceActivateStoryBit("Soon_to_be_prereqs")
+	end--]]
 end
 
 function Unchip_Colonist(colonist)
@@ -450,15 +382,15 @@ function get_faction_in_power()
 end
 
 function find_colonist(id)
-	print('looking for: '..id)
+	--print('looking for: '..id)
 	local did_find = MapForEach(true, "Human", function(unit)
-		print(unit.id)
+		--print(unit.id)
 		if unit.id == id then
-			print("Found it!")
+			--print("Found it!")
 			return unit
 		end
 	end)
-	print(did_find)
+	--print(did_find)
 	if did_find then return did_find else return nil end
 end
 
@@ -468,8 +400,8 @@ function assign_loyalty(surv_id)
 	--local survivor = find_colonist(survivor_instance.id) or nil
 	--if not survivor then return end
 	local source = Px_hire_source or 'unknown'
-	print(source)
-	print(surv_id)
+	--print(source)
+	--print(surv_id)
 	if surv_id == nil or surv_id == false then return end
 	local dispo = Px_hire_dispo or set_random_dispo()
 	Px_hire_source='none'
@@ -555,12 +487,12 @@ function assign_loyalty(surv_id)
 		--survivor_instance:SetTrait("PX_Phyrexia_Loyalty_Hidden", true, "forced")
 		trait_to_give = "PX_Phyrexia_Loyalty_Hidden"
 	end
-	print("Looking for: "..surv_id)
-	print("Assigning this loyalty: "..trait_to_give)
-	print('Are they a criminal? :')
-	print(source == 'Criminal')
+	--print("Looking for: "..surv_id)
+	--print("Assigning this loyalty: "..trait_to_give)
+	--print('Are they a criminal? :')
+	--print(source == 'Criminal')
 	MapForEach(true, "Human", function(unit,surv_id,source,trait_to_give)
-		print(unit.id)
+		--print(unit.id)
 		if unit.id == surv_id then
 			--print("Found them!")
 			if source == 'Criminal' then
@@ -574,13 +506,13 @@ end
 
 function give_chip_healer_traits(action)
 	action = action or false
-	print(action)
+	--print(action)
 	MapForEach(true, "Human", function(unit,action)
-		print(unit.id)
-		print(unit:GetSkillLevel('Healing'))
-		print(unit:GetSkillLevel('Healing')>=8)
-		print(unit:GetSkillLevel('Hacking'))
-		print(unit:GetSkillLevel('Healing')>=8)
+		--print(unit.id)
+		--print(unit:GetSkillLevel('Healing'))
+		--print(unit:GetSkillLevel('Healing')>=8)
+		--print(unit:GetSkillLevel('Hacking'))
+		--print(unit:GetSkillLevel('Healing')>=8)
 		if action and unit:GetSkillLevel('Healing') >= 8 and unit:GetSkillLevel('Hacking') >= 8 and not unit:HasTrait("chip_medic") then
 			unit:SetTrait("chip_medic", true, "forced")
 		elseif not action and unit:HasTrait("chip_medic") then
@@ -697,93 +629,20 @@ function TFormat.hire_echo_disposition(context_obj)
 	return nil
 end
 
-function TFormat.t_ship_orbit(context_obj)
-	local to_return = T{0,""}
-	if Px_smuggle_ship == 'yes' or Px_trade_ship == 'yes' or Px_automated_ship == 'yes' then
-		to_return = to_return..T{121110090813,"Cargo Ship Detected\n"}
-	end
-	if Px_navy_ship then
-		to_return = to_return..T{121110090814,"BattleShip Detected\n"}
-	end
-	if Px_col_ship then
-		to_return = to_return..T{121110090815,"Colony Ship Detected\n"}
-	end
-	if not Px_smuggle_ship and not Px_trade_ship  and not Px_col_ship and not Px_navy_ship and not Px_automated_ship then
-		to_return = to_return..T{121110090816,"No Ships Detected!\n"}
-	end
-	return to_return
-end
-
-function refresh_ship_list()
-	local day_length = const.DayDuration
-	local any_ship_present = false
-	--print('resetting ships available!')
-	local ship_mapvars = {}
-	ship_mapvars[#ship_mapvars+1] = {ship=Px_smuggle_ship,trade=Px_smuggle_trade,hire=Px_smuggle_hire}
-	ship_mapvars[#ship_mapvars+1] = {ship=Px_navy_ship,trade=Px_navy_trade,hire=Px_navy_hire}
-	ship_mapvars[#ship_mapvars+1] = {ship=Px_col_ship,trade=Px_col_trade,hire=Px_col_hire}
-	ship_mapvars[#ship_mapvars+1] = {ship=Px_trade_ship,trade=Px_trade_trade,hire=Px_trade_hire}
-	if droid_dlc then
-		ship_mapvars[#ship_mapvars+1] = {ship=Px_automated_ship,trade=Px_automated_trade,hire=Px_automated_hire}
-	end
-	for _,v in ipairs(ship_mapvars) do
-		local chance = 33
-		local time_ship_started = ship_mapvars.ship
-		local time_passed
-		local days_passed
-		if time_ship_started then -- 70% chance to stay, -4% per day it has been in orbit
-			time_passed = GameTime() - time_ship_started
-			days_passed = Max(1,DivRound(time_passed,day_length))
-			chance = chance + 45 - (days_passed * 4)
-		end
-		if AsyncRand(101) < chance then	-- chance for ship to be present in orbit
-		any_ship_present = true
-			if not time_ship_started then -- ship starts orbiting
-				v.ship = GameTime()
-				v.trade = true
-				v.hire = true
-				-- do nothing if ship still in orbit
-			end 
-		else -- reset themapvars because the ship didn't start orbitting or left orbit 
-			v.ship = nil
-			v.trade = nil
-			v.hire = nil
-		end
-	end
-	if not any_ship_present and AsyncRand(101) < 60 then -- On average, at least 1 ship will be available
-		local temp = AsyncRand(#ship_mapvars) +1
-		local garunteed = last_table[temp]
-		ship_mapvars[temp]['ship'] = GameTime()
-		v.trade = true
-		v.hire = true
-	end
-end
-
-
-
-
 local function px_init(id)
 	id = id or CurrentModId
+	build_ship_logs()
 	if CurrentModId ~= id then return end
-end
-
-function check_unknown_ships()
-	if TradingShips['SmallCargoShip'] ~= nil then
-		Droid_dlc=true
-		if #table.keys(TradingShips) ~5 then
-			ForceActivateStoryBit("unknownShip")
-		end
-	end
-	if #table.keys(TradingShips) ~= 4 then
-		ForceActivateStoryBit("unknownShip")
-	end
 end
 
 local function px_full()
 	px_init('ucCehPy')
-	CreateRealTimeThread(are_prereqs_loaded())
-	refresh_ship_list()
-	check_unknown_ships()
+	CreateGameTimeThread(function()
+		Sleep(day_duration)
+		are_prereqs_loaded()
+	end)
+	Refresh_ship_list()
+	Check_for_unknown_ships()
 	return
 end
 

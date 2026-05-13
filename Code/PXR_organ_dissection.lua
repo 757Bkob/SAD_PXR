@@ -102,7 +102,7 @@ end
 
 function UnitAnimal:DissectSlaughter(unit, skill_level, efficiency)
 	self.dissect_on_death = true
-	print(self.dissect_on_death)
+	--print(self.dissect_on_death)
 	-- Butchering order is issued only if the animal was killed by (last attacker was) a human. This skips combat logic, so we need to explicitly register unit as attacker
 	self:RegisterAttacker(unit, GameTime())
 	self:ChangeHealth(-self.Health, "SlaughterDissect")

@@ -53,6 +53,13 @@ end
 DefineModItemPreset("TradingShipDef", { EditorName = "Trading Ship", EditorSubmenu = "Gameplay" })
 
 
+function At_least_one_ship_in_orbit()
+	for _,v in ipairs(table.keys(Px_ship_logs)) do
+		if Px_ship_logs[v]['orbit'] then return true end
+	end
+	return false
+end
+
 function Refresh_ship_list()
 	local day_length = const.DayDuration
 	local any_ship_present = false
